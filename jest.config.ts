@@ -6,7 +6,7 @@
 export default {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
-
+  
   // Stop running tests after `n` failures
   // bail: 0,
 
@@ -60,7 +60,11 @@ export default {
   // globalTeardown: undefined,
 
   // A set of global variables that need to be available in all test environments
-  // globals: {},
+  // globals: {
+  //   'ts-jest': {
+  //     tsconfig: 'tsconfig.test.json'
+  //   }
+  // },
 
   // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
   // maxWorkers: "50%",
@@ -93,7 +97,7 @@ export default {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  //preset: 'ts-jest',
+  preset: 'ts-jest',
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -117,7 +121,7 @@ export default {
   // rootDir: undefined,
 
   // A list of paths to directories that Jest should use to search for files in
-  roots: ['<rootDir>/tests'],
+  roots: ['<rootDir>/src'],
 
   // Allows you to use a custom runner instead of Jest's default test runner
   // runner: "jest-runner",
@@ -147,7 +151,7 @@ export default {
   // testMatch: [
   //   // "**/__tests__/**/*.[jt]s?(x)",
   //   //'/src/**/?(*.)+(spec|test).[tj]s?(x)',
-  //   '/src/*.(spec|test).[tj]s?(x)',
+  //   '*.(spec|test).[tj]s?(x)',
   // ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
@@ -157,7 +161,9 @@ export default {
   // ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
-  // testRegex: [],
+  testRegex: [
+    '.+\\.test\\.(ts|tsx)$'
+  ],
 
   // This option allows the use of a custom results processor
   // testResultsProcessor: undefined,

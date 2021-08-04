@@ -2,8 +2,7 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "commonjs",
-    //"lib": ["ESNext", "DOM", "es6", "es2017", "esnext.asynciterable"],
-    "lib": ["ES6", "DOM"],
+    "lib": ["ES6"],
     "sourceMap": true,
     "outDir": "./dist",
     "rootDir": "./src",
@@ -23,7 +22,8 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "types": []
   },
-  "exclude": ["dist", "tests", "node_modules", "**/*.test.ts", "jest.config.ts"]
+  "exclude": ["dist", "node_modules", "jest.config.ts"]
 }
